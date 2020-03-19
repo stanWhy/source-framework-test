@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--    默认无参构造函数构建-->
+    <bean class="com.why.spring.ioc.HelloSpring"></bean>
+
+<!--    指定构造函数构建-->
+    <bean class="com.why.spring.ioc.HelloSpring">
+        <constructor-arg name="name" value="why"/>
+        <constructor-arg name="sex" value="1"/>
+    </bean>
+<!--    静态工厂方法创建-->
+    <bean class="com.why.spring.ioc.HelloSpring" factory-method="build"></bean>
+
+<!--使用-->
+    <bean id="driver" class="com.why.spring.ioc.DriverFactoryBean">
+        <property name="driver" value="jdbc:mysql://localhost:3306"></property>
+    </bean>
+</beans>
