@@ -7,10 +7,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="_05_source-mybatis" />
         <module name="_04_source-mybatis" />
+        <module name="_01_source-mybatis" />
         <module name="_02_source-spring" />
         <module name="_02_source-mybatis" />
-        <module name="_01_source-mybatis" />
         <module name="_03_source-mybatis" />
       </profile>
     </annotationProcessing>
