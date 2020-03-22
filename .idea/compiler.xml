@@ -11,15 +11,13 @@
         <module name="_04_source-mybatis" />
         <module name="_08_source-mybatis" />
         <module name="_02_source-mybatis" />
+        <module name="_11_source-spring" />
         <module name="_01_source-mybatis" />
         <module name="_03_source-mybatis" />
         <module name="_07_source-mybatis" />
         <module name="_06_source-mybatis" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="_11_source-spring" target="11" />
-    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">

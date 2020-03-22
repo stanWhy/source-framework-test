@@ -10,7 +10,6 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>_01_source-mybatis</module>
-        <module>_02_source-spring</module>
         <module>_02_source-mybatis</module>
         <module>_03_source-mybatis</module>
         <module>_04_source-mybatis</module>
@@ -18,6 +17,7 @@
         <module>_06_source-mybatis</module>
         <module>_07_source-mybatis</module>
         <module>_08_source-mybatis</module>
+        <module>_11_source-spring</module>
     </modules>
 
     <!--<parent>
