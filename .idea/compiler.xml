@@ -11,8 +11,8 @@
         <module name="_04_source-mybatis" />
         <module name="_07_source-mybatis" />
         <module name="_06_source-mybatis" />
+        <module name="_11_source-spring" />
         <module name="_01_source-mybatis" />
-        <module name="_02_source-spring" />
         <module name="_02_source-mybatis" />
         <module name="_03_source-mybatis" />
       </profile>
@@ -21,7 +21,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="_01_source-mybatis" options="" />
-      <module name="_02_source-spring" options="" />
+      <module name="_11_source-spring" options="" />
       <module name="source-framework-test" options="" />
     </option>
   </component>
