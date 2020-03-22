@@ -7,6 +7,8 @@
 
     <!--在当前Mapper.xml中开启二级缓存-->
     <cache/>
+    <!--使用ehcache作为二级缓存-->
+<!--    <cache type="org.mybatis.caches.ehcache.EhcacheCache"/>-->
 
     <sql id="key">
         id,`name`,pwd
