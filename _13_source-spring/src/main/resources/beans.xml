@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="User1" class="com.why.start.spring.pojo.User">
+        <property name="name" value="why"/>
+    </bean>
+    <!--    1.有参构造  下标赋值-->
+    <bean id="User2" class="com.why.start.spring.pojo.User">
+        <constructor-arg index="0" value="why-contructor-arg"/>
+    </bean>
+
+    <!--    2.有参构造  通过类型创建，不建议使用-->
+    <bean id="User3" class="com.why.start.spring.pojo.User">
+        <constructor-arg type="java.lang.Integer" value="1"/>
+    </bean>
+
+    <!--   3.有参构造 通过name创建，掌握，建议使用这种 -->
+    <bean id="User4" class="com.why.start.spring.pojo.User">
+        <constructor-arg name="name" value="why"/>
+        <constructor-arg name="id" value="10"/>
+    </bean>
+</beans>

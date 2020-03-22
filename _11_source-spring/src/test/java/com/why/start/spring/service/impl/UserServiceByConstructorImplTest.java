@@ -9,7 +9,8 @@ public class UserServiceByConstructorImplTest {
 
     @Test
     public void getUser() {
-        final UserServiceByConstructorImpl userServiceByConstructor = new UserServiceByConstructorImpl(new UserDaoByMysqlImpl());
+        final UserServiceByConstructorImpl userServiceByConstructor =
+                new UserServiceByConstructorImpl(new UserDaoByMysqlImpl());
         userServiceByConstructor.getUser();
     }
 }

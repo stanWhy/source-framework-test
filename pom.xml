@@ -18,6 +18,8 @@
         <module>_07_source-mybatis</module>
         <module>_08_source-mybatis</module>
         <module>_11_source-spring</module>
+        <module>_12_source-spring</module>
+        <module>_13_source-spring</module>
     </modules>
 
     <!--<parent>
