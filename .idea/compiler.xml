@@ -16,6 +16,7 @@
         <module name="_11_source-spring" />
         <module name="_01_source-mybatis" />
         <module name="_02_source-mybatis" />
+        <module name="_14_source-spring" />
         <module name="_12_source-spring" />
         <module name="_03_source-mybatis" />
       </profile>
