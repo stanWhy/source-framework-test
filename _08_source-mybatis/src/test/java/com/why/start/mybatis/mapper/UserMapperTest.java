@@ -16,6 +16,18 @@ public class UserMapperTest {
             final User user = mapper.queryById(1);
             System.out.println(user);
 
+            //手动清理缓存
+            //sqlSession.clearCache();
+            final User user1 = mapper.queryById(1);
+            System.out.println(user1);
+        }
+        try(final SqlSession sqlSession = MybatisUtils.getSqlSession()){
+            final UserMapper mapper = sqlSession.getMapper(UserMapper.class);
+            final User user = mapper.queryById(1);
+            System.out.println(user);
+
+            //手动清理缓存
+            //sqlSession.clearCache();
             final User user1 = mapper.queryById(1);
             System.out.println(user1);
         }

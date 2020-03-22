@@ -5,6 +5,9 @@
 
 <mapper namespace="com.why.start.mybatis.mapper.UserMapper">
 
+    <!--在当前Mapper.xml中开启二级缓存-->
+    <cache/>
+
     <sql id="key">
         id,`name`,pwd
     </sql>
