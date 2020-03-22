@@ -17,6 +17,7 @@
         <module>_05_source-mybatis</module>
         <module>_06_source-mybatis</module>
         <module>_07_source-mybatis</module>
+        <module>_08_source-mybatis</module>
     </modules>
 
     <!--<parent>

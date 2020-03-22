@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<!--configuration核心配置文件-->
+<configuration>
+    <!--引入外部配置文件-->
+    <properties resource="db.properties"/>
+
+    <settings>
+        <!--<setting name="logImpl" value="STDOUT_LOGGING"/>-->
+        <setting name="logImpl" value="STDOUT_LOGGING"/>
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+    </settings>
+
+    <!--给实体类设置别名-->
+    <typeAliases>
+        <!--单独设置每一个类名-->
+        <!--<typeAlias type="com.why.start.mybatis.pojo.User" alias="User"/>-->
+        <!--设置扫描整个类,可以通过设置类的注解（@Alies()）起别名，注解优先xml-->
+        <package name="com.why.start.mybatis.pojo"/>
+    </typeAliases>
+
+    <!--可以配置多套环境，使用哪个就在<environments default="">中切换哪个-->
+    <environments default="test">
+        <environment id="test">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <property name="driver" value="${driver}"/>
+                <property name="url" value="${url}"/>
+                <property name="username" value="${username}"/>
+                <property name="password" value="${password}"/>
+            </dataSource>
+        </environment>
+    </environments>
+
+<!--    绑定接口-->
+    <mappers>
+        <mapper resource="mybatis/UserMapper.xml"/>
+    </mappers>
+</configuration>
