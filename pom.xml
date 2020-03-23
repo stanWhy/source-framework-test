@@ -20,8 +20,13 @@
         <module>_11_source-spring</module>
         <module>_12_source-spring</module>
         <module>_13_source-spring</module>
-        <module>_14_source-mybatis</module>
+        <module>_14_source-spring</module>
         <module>_15_source-spring</module>
+        <module>_16_source-spring</module>
+        <module>_17_source-spring</module>
+        <module>_18_source-spring</module>
+        <module>_19_source-spring</module>
+        <module>_20_source-spring</module>
     </modules>
 
     <!--<parent>
