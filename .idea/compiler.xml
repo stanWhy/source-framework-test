@@ -20,6 +20,7 @@
         <module name="_05_source-mybatis" />
         <module name="_13_source-spring" />
         <module name="_06_source-mybatis" />
+        <module name="_22_spring-mybatis" />
         <module name="_17_source-spring" />
         <module name="_07_source-mybatis" />
         <module name="_18_source-spring" />
@@ -28,6 +29,9 @@
         <module name="_08_source-mybatis" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="_201_source-spring" target="11" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">

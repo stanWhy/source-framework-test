@@ -28,6 +28,7 @@
         <module>_19_source-spring</module>
         <module>_20_source-spring</module>
         <module>_21_spring-mybatis</module>
+        <module>_22_spring-mybatis</module>
     </modules>
 
     <!--<parent>
