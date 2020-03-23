@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--    专注于对mybatis的链接，无需更改-->
+
+
+
+    <!--
+    DataSource:使用spring的数据源替换mybatis的配置
+    我们这里使用spring提供的jdbc
+    -->
+    <bean id="datasource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="com.mysql.cj.jdbc.Driver"/>
+        <property name="url" value="jdbc:mysql://localhost:3306/mybatis?useSSL=true&amp;useUnicode=true&amp;characterEncoding=UTF-8&amp;serverTimezone=UTC"/>
+        <property name="username" value="root"/>
+        <property name="password" value="wanghongyu"/>
+     </bean>
+
+    <!--    sqlSessionFactory-->
+    <bean id="sqlSeesionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="datasource"/>
+<!--        绑定mybatis配置文件-->
+        <property name="configLocation" value="classpath:mybatis-config.xml"/>
+<!--        绑定接口，由mybaits-config.xml 切换到 applicationConfig.xml-->
+        <property name="mapperLocations" value="classpath:mybatis/*.xml"/>
+    </bean>
+<!--SqlSessionTemplate 就是我们常使用SqlSession-->
+    <bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
+<!--        只能用构造器注入SqlSessionFactory ,因为没有set方法-->
+        <constructor-arg index="0" ref="sqlSeesionFactory"/>
+    </bean>
+
+</beans>
