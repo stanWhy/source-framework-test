@@ -3,13 +3,20 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-<!--    spring 总配置文件-->
+    <!--    spring 总配置文件-->
 
 
-<!--    关联spring管理mybatis的配置文件-->
-    <import resource="applicationConfig.xml" />
-
+    <!--    关联spring管理mybatis的配置文件-->
+    <!--    <import resource="applicationConfig2.xml" />-->
+    <!--方式1-->
+    <!--<import resource="applicationConfig.xml"/>
     <bean id="userMapper" class="com.why.start.mapper.UserMapperImpl">
         <property name="sqlSession" ref="sqlSession"/>
+    </bean>-->
+
+    <!--    方式2-->
+    <import resource="applicationConfig2.xml" />
+    <bean id="userMapper" class="com.why.start.mapper.UserMapperImpl2">
+        <property name="sqlSessionFactory" ref="sqlSeesionFactory"/>
     </bean>
 </beans>
