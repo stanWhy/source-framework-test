@@ -29,6 +29,12 @@
         <module>_20_source-spring</module>
         <module>_21_spring-mybatis</module>
         <module>_22_spring-mybatis</module>
+        <module>_31_source-springmvc</module>
+        <module>_33_source-springmvc</module>
+        <module>_32_source-springmvc</module>
+        <module>_34_source-springmvc</module>
+        <module>_35_source-springmvc</module>
+        <module>_36_source-springmvc</module>
     </modules>
 
     <!--<parent>
