@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <!--    1.配置数据源，交给spring来做-->
+    <!--    2.设置setting，可以忽略-->
+    <!--    3.给实体类设置别名-->
+    <typeAliases>
+        <package name="com.why.start.ssm.pojo"/>
+    </typeAliases>
+    <!--    4.配置mapper映射，交给spring来做-->
+    <mappers>
+        <mapper resource="mybatis/BookMapper.xml"/>
+    </mappers>
+</configuration>

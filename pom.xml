@@ -35,6 +35,7 @@
         <module>_34_source-springmvc</module>
         <module>_35_source-springmvc</module>
         <module>_36_source-springmvc</module>
+        <module>_41_source-ssm</module>
     </modules>
 
     <!--<parent>

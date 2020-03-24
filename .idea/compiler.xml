@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="_14_source-spring" />
+        <module name="_41_source-ssm" />
         <module name="_04_source-mybatis" />
         <module name="_33_source-springmvc" />
         <module name="_15_source-spring" />
