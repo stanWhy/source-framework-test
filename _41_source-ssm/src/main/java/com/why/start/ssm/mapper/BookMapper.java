@@ -10,5 +10,6 @@ public interface BookMapper {
     int delBookById(@Param("bookID") int id);
     int updateBook(Books books);
     Books selectBookById(@Param("bookID")int id);
+    Books selectBookByName(@Param("bookName")String name);
     List<Books> queryAllBook();
 }

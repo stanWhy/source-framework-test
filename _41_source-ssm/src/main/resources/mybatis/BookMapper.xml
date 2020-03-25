@@ -34,6 +34,11 @@
         from    books
         where   bookID = #{bookID}
     </select>
+    <select id="selectBookByName" resultType="Books">
+        select  <include refid="key"/>
+        from    books
+        where   bookName = #{bookName}
+    </select>
 
     <select id="queryAllBook" resultType="Books">
         select  <include refid="key"/>

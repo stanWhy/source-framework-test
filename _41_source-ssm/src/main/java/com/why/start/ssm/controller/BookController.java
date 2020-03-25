@@ -9,6 +9,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Controller
@@ -18,6 +19,15 @@ public class BookController {
     @Autowired
     @Qualifier("BookServiceImpl")
     private BookService bookService;
+
+    @RequestMapping("/queryBook")
+    public String queryBook(String queryBookName,Model model){
+        final Books books = bookService.selectBookByName(queryBookName);
+        List<Books> list = new ArrayList<>();
+        list.add(books);
+        model.addAttribute("args",list);
+        return "allBook";
+    }
 
     //查询全部的书籍，并返回到一个书籍展示页面
     @RequestMapping("/allBook")
@@ -65,4 +75,6 @@ public class BookController {
         }
         return "redirect:/book/allBook";
     }
+
+
 }

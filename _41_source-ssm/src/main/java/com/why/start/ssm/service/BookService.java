@@ -9,5 +9,6 @@ public interface BookService {
     int delBookById(int id);
     int updateBook(Books books);
     Books selectBookById(int id);
+    Books selectBookByName(String name);
     List<Books> queryAllBook();
 }
