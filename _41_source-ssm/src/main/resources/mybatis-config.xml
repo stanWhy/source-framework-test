@@ -5,6 +5,9 @@
 <configuration>
     <!--    1.配置数据源，交给spring来做-->
     <!--    2.设置setting，可以忽略-->
+    <settings>
+        <setting name="logImpl" value="STDOUT_LOGGING"/>
+    </settings>
     <!--    3.给实体类设置别名-->
     <typeAliases>
         <package name="com.why.start.ssm.pojo"/>

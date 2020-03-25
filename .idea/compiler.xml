@@ -8,7 +8,6 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="_14_source-spring" />
-        <module name="_41_source-ssm" />
         <module name="_04_source-mybatis" />
         <module name="_33_source-springmvc" />
         <module name="_15_source-spring" />
@@ -18,13 +17,14 @@
         <module name="_01_source-mybatis" />
         <module name="_35_source-springmvc" />
         <module name="_21_spring-mybatis" />
-        <module name="_22_spring-mybatis" />
+        <module name="_41_source-ssm" />
         <module name="_05_source-mybatis" />
         <module name="_13_source-spring" />
         <module name="_34_source-springmvc" />
         <module name="_02_source-mybatis" />
         <module name="_06_source-mybatis" />
         <module name="_32_source-springmvc" />
+        <module name="_22_spring-mybatis" />
         <module name="_17_source-spring" />
         <module name="_07_source-mybatis" />
         <module name="_36_source-springmvc" />
@@ -36,9 +36,6 @@
         <module name="_08_source-mybatis" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="_201_source-spring" target="11" />
-    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">

@@ -95,11 +95,17 @@
 <configuration>
     <!--    1.配置数据源，交给spring来做-->
     <!--    2.设置setting，可以忽略-->
+    <settings>
+        <setting name="logImpl" value="STDOUT_LOGGING"/>
+    </settings>
     <!--    3.给实体类设置别名-->
     <typeAliases>
         <package name="com.why.start.ssm.pojo"/>
     </typeAliases>
     <!--    4.配置mapper映射，交给spring来做-->
+    <mappers>
+        <mapper resource="mybatis/BookMapper.xml"/>
+    </mappers>
 </configuration>
 ```
 ##3.创建数据库连接配置文件--database.properties
@@ -200,7 +206,9 @@ password=wanghongyu
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
-       http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       https://www.springframework.org/schema/context/spring-context.xsd">
 
 <!--    1.扫描service下的包-->
     <context:component-scan base-package="com.why.start.ssm.service"/>
@@ -213,6 +221,7 @@ password=wanghongyu
 <!--        注入数据源-->
         <property name="dataSource" ref="dataSource"/>
     </bean>
+<!--    4.aop事务支持！-->
 </beans>
 ```
 ##3.整合spring配置--applicationContext.xml
@@ -344,22 +353,24 @@ public class BookServiceTest {
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xmlns:mvc="http://www.springframework.org/schema/mvc"
        xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans.xsd
-       http://www.springframework.org/schema/mvc
-       http://www.springframework.org/schema/mvc/spring-mvc.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+        http://www.springframework.org/schema/context
+       https://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/mvc
+       https://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
-    <!--    1.注解驱动-->
+<!--    1.注解驱动-->
     <mvc:annotation-driven/>
     <!--    2.静态资源过滤-->
     <mvc:default-servlet-handler/>
     <!--    3.扫描包：controller-->
     <context:component-scan base-package="com.why.start.ssm.controller"/>
     <!--    4.视图解析器-->
-    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-        <property name="prefix" value="/WEB-INF/jsp"/>
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver" id="internalResourceViewResolver">
+        <property name="prefix" value="/WEB-INF/jsp/"/>
         <property name="suffix" value=".jsp"/>
     </bean>
 </beans>
