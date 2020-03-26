@@ -12,6 +12,7 @@ public class PeopleTest2 {
         final People2 people = context.getBean("people2", People2.class);
         people.getCat().shot();
         people.getDog().shot();
+        people.test();
     }
 
 }

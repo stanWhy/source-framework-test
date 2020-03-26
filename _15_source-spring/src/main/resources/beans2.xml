@@ -13,5 +13,9 @@
     <bean id="cat2" class="com.why.start.spring.pojo.Cat2"/>
     <bean id="dog2" class="com.why.start.spring.pojo.Dog2"/>
 
-    <bean id="people2" class="com.why.start.spring.pojo.People2"/>
+    <bean id="people2" class="com.why.start.spring.pojo.People2">
+<!--        注：注解支持，省略参数注入的过程   -->
+        <!--<property name="cat" ref="cat2"/>
+        <property name="dog" ref="dog2"/>-->
+    </bean>
 </beans>

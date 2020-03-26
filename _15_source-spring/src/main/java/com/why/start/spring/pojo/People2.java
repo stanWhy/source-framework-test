@@ -10,4 +10,9 @@ public class People2 {
     private Dog2 dog;
     @Autowired
     private Cat2 cat;
+
+    public void test(){
+        dog.shot();
+        cat.shot();
+    }
 }

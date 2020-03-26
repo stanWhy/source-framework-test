@@ -13,7 +13,7 @@
         <package name="com.why.start.ssm.pojo"/>
     </typeAliases>
     <!--    4.配置mapper映射，交给spring来做-->
-    <mappers>
+    <!--<mappers>
         <mapper resource="mybatis/BookMapper.xml"/>
-    </mappers>
+    </mappers>-->
 </configuration>
